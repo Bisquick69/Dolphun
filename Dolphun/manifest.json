@@ -1,0 +1,52 @@
+{
+	"update_url": "https://clients2.google.com/service/update2/crx",
+
+	"manifest_version": 2,
+
+	"name": "DOLPHUN",
+	"short_name": "DOLPHUN",
+	"description": "IT'S A LASER DOLPHIN YOU FUCK!",
+	"version": "6.9",
+
+	"background": {
+		"scripts": ["js/launcher.js"]
+	},
+
+	"browser_action": {
+		"default_icon": {
+			"128": "icons/icon-128.png",
+			"96": "icons/icon-96.png",
+			"64": "icons/icon-64.png",
+			"16": "icons/icon-16.png"
+		}
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["js/dolphun.js"]
+		}
+	],
+
+	"icons": {
+		"128": "icons/icon-128.png",
+		"96": "icons/icon-96.png",
+		"64": "icons/icon-64.png",
+		"16": "icons/icon-16.png"
+	},
+
+	"web_accessible_resources": [
+		"images/horsebod.png",
+		"images/DolphinHead.png",
+		"images/horse.png",
+		"sounds/laser-loop.mp3",
+		"sounds/laser-start.mp3",
+		"sounds/meow.mp3",
+		"sounds/eek.wav",
+		"sounds/eek2.wav",
+		"sounds/eek2.mp3",
+		"sounds/chargeup.wav"
+	],
+
+	"permissions": ["activeTab", "*://*/*"]
+}
